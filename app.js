@@ -1,4 +1,4 @@
-console.log(Date());
+// console.log(Date());
 var monthtext = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
 
 function populatedropdown(dayfield, monthfield, yearfield) {
@@ -23,13 +23,13 @@ function populatedropdown(dayfield, monthfield, yearfield) {
 window.onload = function() {
     populatedropdown("daydropdown", "monthdropdown", "yeardropdown")
 }
-function select(event){
+function select(e){
+  e.preventDefault();
   console.log(document.getElementById('daydropdown').value);
   console.log(document.getElementById('monthdropdown').value);
   console.log(document.getElementById('yeardropdown').value);
 }
 var inputday = document.getElementById('daydropdown').value;
 var inputmonth = document.getElementById('monthdropdown').value;
-
 var todayday = new Date().getDate();
 var todaymonth = new Date().getMonth();
